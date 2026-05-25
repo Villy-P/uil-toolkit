@@ -5,8 +5,14 @@
 @source '../node_modules/@valerius_petrini/corekit-ui/';
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+    --vpcui-font-display: "Inter" sans-serif;
+    --vpcui-font-body: "Inter" sans-serif;
+    --vpcui-font-mono: "JetBrains Mono" monospace;
+}
+
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-    @apply mt-3 mb-1;
+    @apply mt-3 mb-1 font-display;
 }
 
 .markdown-body h1 {
@@ -34,7 +40,7 @@
 }
 
 .markdown-body pre > code {
-    @apply p-3
+    @apply p-3 font-mono
 }
 
 .markdown-body code {

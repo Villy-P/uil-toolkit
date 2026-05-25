@@ -1,5 +1,5 @@
 <script>
-	import { Navbar, NavbarElement, NavbarSeparator, Button } from "@valerius_petrini/corekit-ui";
+	import { Navbar, NavbarElement, NavbarSeparator } from "@valerius_petrini/corekit-ui";
 </script>
 
 <Navbar>
@@ -8,7 +8,7 @@
     <NavbarElement href="/topics">Topics</NavbarElement>
     <NavbarElement href="/resources">Resources</NavbarElement>
     <NavbarElement href="/reference">Reference</NavbarElement>
-    <Button href="https://github.com/Villy-P/UIL-CS-Toolkit" external>
+    <NavbarElement href="https://github.com/Villy-P/UIL-CS-Toolkit" external>
         <img class="h-6" src="/social/github-mark-white.svg" alt="Github Page"/>
-    </Button>
+    </NavbarElement>
 </Navbar>
