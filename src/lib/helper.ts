@@ -20,6 +20,26 @@ export function checkIfFolderExists(folderURL: string): boolean {
     return folderContainsFiles;
 }
 
+export function getListOfTopics(subject: string): string[] {
+    const allFiles = import.meta.glob('../../static/subject/**/topics/**/*');
+
+    const targetPathSegment = `static/subject/${subject}/topics/`
+    const topics = Object.keys(allFiles)
+        .map((path) => {
+            const idx = path.indexOf(targetPathSegment);
+            if (idx === -1) return null;
+
+            const rest = path.slice(idx + targetPathSegment.length);
+            const topicName = rest.split('/')[0];
+            return topicName || null;
+        })
+        .filter((t): t is string => t !== null);
+
+    const uniqueTopics = [...new Set(topics)];
+
+    return uniqueTopics;
+}
+
 export function getResource(subject: string): string | null {
     const allFiles = import.meta.glob('../../static/subject/**/*.md', {
         query: '?raw',
