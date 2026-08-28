@@ -11,6 +11,7 @@ export const topics: TopicData = {
     ascii: {
         name: "ASCII",
         cheatsheet: true,
+        guide: true,
     },
     bases: {
         name: "Bases",
