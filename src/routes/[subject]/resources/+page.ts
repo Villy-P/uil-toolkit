@@ -1,4 +1,4 @@
-import { checkIfExists, checkIfFolderExists, getResource } from '$lib/helper';
+import { checkIfExists, getResource } from '$lib/helper';
 import { error } from '@sveltejs/kit';
 
 export async function load({ params, fetch }) {
