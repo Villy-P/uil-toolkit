@@ -1,0 +1,20 @@
+{
+    "questions": [
+        {
+            "question": "What is the output by the code below?",
+            "code": [
+                "out.println((-17 % 7) | (11 << 3));"
+            ],
+            "answers": [
+                "`91`",
+                "`-3`",
+                "`88`",
+                "`-91`",
+                "There is no output due to a compile error"
+            ],
+            "correct": 1,
+            "explanation": "The code will first evaluate the expression `(-17 % 7)`. The remainder of `-17 / 7` is -3, so the result of this expression is `-3`. The code will then evaluate the expression `(11 << 3)`. `11` in binary is `1011`, and shifted `3` over turns it into `1011000`, which is `88`. The code will then evaluate the expression `-3 | 88`. The result of this expression is `-3`. The output will be `-3`.",
+            "source": "UIL Computer Science Written Test - 2025 Invitational B"
+        }
+    ]
+}

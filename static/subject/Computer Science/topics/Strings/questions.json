@@ -1,0 +1,64 @@
+{
+    "questions": [
+        {
+            "question": "What is output by the code segment below?",
+            "code": [
+                "String t = \"MississippiBurning\";",
+                "t.replaceAll(\"i\",\"U\");",
+                "out.println(t);"
+            ],
+            "answers": [
+                "`MississippiBurning`",
+                "`MUssUssUppUBurnUng`",
+                "`MussussuppuBurnung`",
+                "`MississippiBirning`",
+                "There is no output due to an error."
+            ],
+            "correct": 0,
+            "explanation": "The `replaceAll` method returns a new string with the replacement made. The original string is not modified. The code should be `t = t.replaceAll(\"i\",\"U\");`. Remember that strings are immutable.",
+            "source": "UIL Test"
+        }, {
+            "question": "What is output by the code segment below?",
+            "code": [
+                "String s = \"pneumonoultramicroscop\"+",
+                "           \"icsilicovolcanoconiosis\";",
+                "while (s.length() > 10) {",
+                "    s = s.substring(3);",
+                "}",
+                "out.println(s);"
+            ],
+            "answers": [
+                "`oconiosis`",
+                "`noconiosis`",
+                "`pneumonou`",
+                "`pneumonoul`",
+                "There is no output due to an error."
+            ],
+            "correct": 1,
+            "explanation": "The code will remove the first 3 characters of the string until the length of the string is less than or equal to 10. The output will be `noconiosis`.",
+            "source": "UIL Test"
+        }, {
+            "question": "Assuming that indented lines are continuations of the previous line, what is the output by the code to the right?",
+            "code": [
+                "String s1 =",
+                "\t\"hEllo thEre... GEnEral KEnobi\";",
+                "String s2 = s1.toLowerCase();",
+                "String[] arr1 = s1.split(\"E\");",
+                "String[] arr2 = s2.split(\"E\");",
+                "int diff = arr1.length -",
+                "\tarr2.length;",
+                "out.println(diff);"
+            ],
+            "answers": [
+                "`-6`",
+                "`-5`",
+                "`5`",
+                "`6`",
+                "There is no output due to an error."
+            ],
+            "correct": 2,
+            "explanation": "First off, since `s2` has no `E`'s, as it was converted to lowercase, `split` will return an array with size `1`. When `s1` is split by `E`'s, it splits the string into this array: `[\"h\", \"llo th\", \"re... G\", \"n\", \"ral K\", \"nobi\"]`, which has a length of `6`. `6 - 1 = 5`, so our answer is `5`.",
+            "source": "UIL Computer Science Written Test - 2025 Invitational B"
+        }
+    ]
+}
