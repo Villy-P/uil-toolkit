@@ -21,7 +21,10 @@ export function checkIfFolderExists(folderURL: string): boolean {
 }
 
 export function getListOfTopics(subject: string): string[] {
-    const allFiles = import.meta.glob('../../static/subject/**/topics/**/*');
+    const allFiles = import.meta.glob('../../static/subject/**/topics/**/*', {
+        query: '?raw',
+        eager: true,
+    });
 
     const targetPathSegment = `static/subject/${subject}/topics/`
     const topics = Object.keys(allFiles)
