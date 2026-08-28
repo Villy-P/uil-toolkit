@@ -1,5 +1,5 @@
 <script>
-    import SEO from '../../components/SEO.svelte';
+    import SEO from '../../../components/SEO.svelte';
     import { Text } from '@valerius_petrini/corekit-ui';
 </script>
 
