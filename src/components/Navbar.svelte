@@ -2,6 +2,7 @@
 	import { Navbar, NavbarElement, NavbarSeparator } from "@valerius_petrini/corekit-ui";
 
     import CodeXML from "@lucide/svelte/icons/code-xml";
+	import { page } from "$app/state";
 </script>
 
 <Navbar class="z-1000">
@@ -10,9 +11,9 @@
         UIL CS Toolkit
     </NavbarElement>
     <NavbarSeparator/>
-    <NavbarElement class="text-sub-text" href="/topics">Topics</NavbarElement>
-    <NavbarElement class="text-sub-text" href="/resources">Resources</NavbarElement>
-    <NavbarElement class="text-sub-text" href="/reference">Reference</NavbarElement>
+    <NavbarElement class="text-sub-text" href="/{page.params.subject}/topics">Topics</NavbarElement>
+    <NavbarElement class="text-sub-text" href="/{page.params.subject}/resources">Resources</NavbarElement>
+    <NavbarElement class="text-sub-text" href="/{page.params.subject}/reference">Reference</NavbarElement>
     <NavbarElement href="https://github.com/Villy-P/UIL-CS-Toolkit" external>
         <img class="h-6" src="/social/github-mark-white.svg" alt="Github Page"/>
     </NavbarElement>
